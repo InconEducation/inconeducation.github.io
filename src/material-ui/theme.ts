@@ -3,9 +3,11 @@ import { createTheme } from '@mui/material/styles';
 // Create a theme instance.
 
 const colorPrimary = "#3369b4"
-const colorSecondary = "#ffffff"
-const colorInfo = "#63B1FF"
-const colorText = "#000000"
+const colorSecondary = "#63B1FF"
+const colorInfo = "#fffff"
+
+const colorBlack = "#000000"
+const colorWhite = "#ffffff"
 
 const theme = createTheme({
   typography: {
@@ -35,18 +37,25 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           backgroundColor: colorPrimary,
-          color: colorSecondary
+          color: colorWhite
         }
       }
     },
     MuiFab: {
       styleOverrides: {
         root: {
-          color: colorText,
           position: 'fixed', 
           bottom: 50,
           right: 50,
           padding: '30px'
+        }
+      }
+    },
+    MuiButton: {
+      styleOverrides: {
+        containedInfo: {
+          backgroundColor: colorWhite,
+          color: colorPrimary
         }
       }
     }
